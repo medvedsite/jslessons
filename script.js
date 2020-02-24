@@ -159,7 +159,7 @@ console.log(options);
 // цикл for in перебирает свойства объекта
 
 for (let key in options) {
-	console.log('Свойство ' + key + ' имеет значение '+ options[key])
+	console.log('Свойство ' + key + ' имеет значение '+ options[key]);
 }
 console.log(Object.keys(options).length); // смотрим количество свойств.
 
@@ -169,7 +169,7 @@ let arr = [1, 2, 3, 4, 5];
 
 arr.pop(); // удаление последнего элемента массива
 arr.push('5'); //добавление элемента в массив (в конец)
-arr.shift(); // удаление первого элемента массива
+arr.shift(); // удаление первого элемента массива!
 arr.unshift(); // добавление эелемента в начало массива
 
 //перебор элементов массива
@@ -228,3 +228,7 @@ let jhon = {
 
 jhon.__proto__ = soldier; // soldier стал прототипом объекта jhon
 console.log(jhon.armor);
+
+[111, 222, 333, 444, 555, 666, 777, 888, 999].forEach((el, idx) => {
+	if (idx > 0) {console.log(el);}
+	});
