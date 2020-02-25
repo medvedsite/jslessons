@@ -232,3 +232,46 @@ console.log(jhon.armor);
 [111, 222, 333, 444, 555, 666, 777, 888, 999].forEach((el, idx) => {
 	if (idx > 0) {console.log(el);}
 	});
+
+// получение элементов со страницы
+
+let className = document.getElementById('ID'); //получение эл-та по #ID  (только 1 элемент)
+let btn = document.getElementsByTagName('button'); //по тэгам, (все элементы) - псевдомассив
+console.log(btn[0]); // - первая кнопка
+let circle = document.getElementsByClassName('circle');// через класс - псевдомассив.
+console.log(circle[0]);
+// частоиспользуемый 
+let selector = document.querySelectorAll('.wrapper.selectorName'); // forEach + (ID, class, tag)
+let firstElement = document.querySelector('.class name'); // первый элемент по селектору
+
+// действия с элементами на странице
+variable.style.backgroundColor = 'black';
+variable.style.borderRadius = '100%';
+variable[0].style.color = 'green';
+
+// действие со всеми элеметнами в переменной
+for (let i = 0, i < variable.length, i++) {
+	variable[0].style.color = 'blue';
+}
+
+variable.forEach(function(item, i, variables) {
+	item.style.backgroundColor = 'blue';
+});
+
+// создаём элементы на странице 
+
+let div = document.createElement('div'),
+	text = document.createTextNode('какойто текст');
+
+// добавляем стили
+div.classList.add('className'); // добавляем стили с помощью классов css, имеет togle.
+
+document.body.appendChild(div); // добавили наш блок к родителю в самый конец
+document.body.insertBefore(div, variable[0]); // добавили блок к в начало родителя.
+document.body.removeChild(variable[0]); // удалили элемент
+wrapper.removeChild(variable[2]); // тоже самое 
+document.body.replaceChild(btn[1], circle[2]); // заменяет один элемент другим. (2й элемент удаляет)
+
+div.innerHTML = 'Hello world!';
+div.innerHTML = '<h1>Hello world!</h1>';
+
